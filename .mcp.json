@@ -17,6 +17,15 @@
     "shadcn": {
       "command": "npx",
       "args": ["shadcn@latest", "mcp"]
+    },
+    "shrimp-task-manager": {
+      "command": "node",
+      "args": ["/Users/gdp/tools/mcp-shrimp-task-manager/dist/index.js"],
+      "env": {
+        "DATA_DIR": "/Users/gdp/workspace/learning-project/claude-mastery/claude-nextjs-starters/shrimp-data",
+        "TEMPLATES_USE": "en",
+        "ENABLE_GUI": "true"
+      }
     }
   }
 }
