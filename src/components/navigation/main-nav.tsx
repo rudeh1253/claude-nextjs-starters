@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+
 import { cn } from '@/lib/utils'
 
 interface NavItem {
@@ -9,8 +10,13 @@ interface NavItem {
   href: string
 }
 
-const navItems: NavItem[] = [
+/** 전역 내비게이션 항목 (PRD F013) */
+export const navItems: NavItem[] = [
   { title: '홈', href: '/' },
+  { title: '카테고리', href: '/categories' },
+  { title: '태그', href: '/tags' },
+  { title: '검색', href: '/search' },
+  { title: '소개', href: '/about' },
 ]
 
 export function MainNav() {

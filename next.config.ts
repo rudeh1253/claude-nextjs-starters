@@ -5,6 +5,18 @@ const nextConfig: NextConfig = {
   compress: true,
   images: {
     formats: ['image/webp', 'image/avif'],
+    // Notion 호스팅 이미지(커버/본문). 만료(약 1시간) 대응은 ISR 재검증으로 URL 을 갱신합니다.
+    // 완전한 영구화(빌드 시 다운로드/프록시)는 후속 작업으로 둡니다. (F004)
+    remotePatterns: [
+      { protocol: 'https', hostname: '*.amazonaws.com' },
+      {
+        protocol: 'https',
+        hostname: 'prod-files-secure.s3.us-west-2.amazonaws.com',
+      },
+      { protocol: 'https', hostname: '*.notion.so' },
+      { protocol: 'https', hostname: '*.notion-static.com' },
+      { protocol: 'https', hostname: 'images.unsplash.com' },
+    ],
   },
   experimental: {
     optimizePackageImports: ['lucide-react'],

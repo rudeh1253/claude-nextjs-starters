@@ -2,13 +2,11 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { cn } from '@/lib/utils'
-import { Separator } from '@/components/ui/separator'
 
-const navItems = [
-  { title: '홈', href: '/' },
-  { title: '로그인', href: '/login' },
-]
+import { Separator } from '@/components/ui/separator'
+import { cn } from '@/lib/utils'
+
+import { navItems } from './main-nav'
 
 interface MobileNavProps {
   onClose: () => void
